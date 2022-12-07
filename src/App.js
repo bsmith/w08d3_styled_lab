@@ -1,5 +1,13 @@
 import {useState} from 'react';
+import styled from 'styled-components';
+
 import CommentCard from './components/CommentCard';
+import SearchContainer from './containers/SearchContainer';
+
+const BigHorizontalLine = styled.hr`
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+`;
 
 function App() {
 
@@ -29,9 +37,11 @@ function App() {
     )
   } );
 
-  return (
+  return (<>
+    <SearchContainer />
+    <BigHorizontalLine />
     <ul>{cards}</ul>
-  )
+  </>)
 
 }
 
